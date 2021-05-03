@@ -44,17 +44,17 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Management</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="http://127.0.0.1:8000/createOppurtunityForm">Add New Oppurtunity</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="http://127.0.0.1:8000/editAllOppurtunity">Edit Oppurtunity</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="#">Add New Oppurtunity</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="#">Edit Oppurtunity</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Informatiion</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/completedOppurtunity">Completed</a></li>
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/quoteOppurtunity">Quotes</a></li>
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/biddingOppurtunity">Bids</a></li>
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/deployedOppurtunity">Deployed</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Completed</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Quotes</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Bids</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Deployed</a></li>
                         </ul>
                     </li>
                     <li class="">
@@ -71,6 +71,34 @@
     </aside>
     <!-- /#left-panel -->
 
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        <!-- Header-->
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./"> {{ Auth::user()->name }}'s Home</a>
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- /#header -->
+
     @yield('content')
 
 
@@ -80,10 +108,10 @@
         <div class="footer-inner bg-white">
             <div class="row">
                 <div class="col-sm-6">
-                    Copyright &copy; 2018 Ela Admin
+                    Copyright &copy; 2021 BC Tech
                 </div>
                 <div class="col-sm-6 text-right">
-                    Designed by <a href="https://colorlib.com">Colorlib</a>
+                    Designed by <a href="https://www.linkedin.com/in/omeiza-aliu-bb5367130/" target="_blank">Aliu</a>
                 </div>
             </div>
         </div>

@@ -604,7 +604,6 @@ canvas {
     top: 0px;
     height: 37px;
     width: 10px;
-    background: #e8e9ef;
 }
 
 .order-table:after {
@@ -2006,15 +2005,13 @@ header .form-inline .search-form.close {
     border: none;
     border-bottom: 1px solid #e8e9ef;
     color: #868e96;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: normal;
-    padding: .75em 1.25em;
     text-transform: uppercase;
 }
 
 .table-stats table th img,
 .table-stats table td img {
-    margin-right: 10px;
     max-width: 45px;
 }
 
