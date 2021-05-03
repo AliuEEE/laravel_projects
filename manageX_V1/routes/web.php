@@ -8,8 +8,7 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\Auth\AdminLoginController;
 
-
-
+//use App\Http\Controllers\OppurtunityController;
 
 
 /*
@@ -31,6 +30,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+// Route::get('/createOppurtunityForm', ['uses' => OppurtunityController::class], 'createOppurtunityForm')->name('createOppurtunityForm');
+
+//this method is used because auth is used in the laravel
+Route::get('/createOppurtunityForm', ['uses' => 'App\Http\Controllers\OppurtunityController@createOppurtunityForm'])->name('createOppurtunityForm');
+
+
+
+
 
 //admin routes
 

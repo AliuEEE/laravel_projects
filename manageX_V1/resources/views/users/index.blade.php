@@ -17,7 +17,7 @@
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
-                                    <div class="stat-text"><span class="count">5</span></div>
+                                    <div class="stat-text"><span class="count">{{$totalOppurtunity}}</span></div>
                                     <div class="stat-heading">Total</div>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
-                                    <div class="stat-text"><span class="count">1</span></div>
+                                    <div class="stat-text"><span class="count">{{$completedOppurtunity}}</span></div>
                                     <div class="stat-heading">Completed</div>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
-                                    <div class="stat-text"><span class="count">5</span></div>
+                                    <div class="stat-text"><span class="count">{{$inProgressOppurtunity}}</span></div>
                                     <div class="stat-heading">In Progress</div>
                                 </div>
                             </div>
@@ -85,25 +85,31 @@
                                             <th scope="col">Duration</th>
                                             <th scope="col">Partner</th>
                                             <th scope="col">Status</th>
+                                            <th scope="col">D.O.C</th>
                                             <th scope="col">Edit</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($oppurtunity as $opp)
                                         <tr>
-                                            <td class="name">CBN</td>
-                                            <td class="name">bespoke</td>
-                                            <td class="name">Do a Sophos Demo</td>
-                                            <td class="name">5 Week(s)</td>
-                                            <td class="name">Mart-Networks</td>
+                                            <td class="name">{{$opp->customer}}</td>
+                                            <td class="name">{{$opp->service}}</td>
+                                            <td class="name">{{$opp->description}}</td>
+                                            <td class="name">{{$opp->duration}} Week(s)</td>
+                                            <td class="name">{{$opp->partner}}</td>
                                             <td>
-                                                <span class="badge badge-complete" style="background: orange;">quote</span>
+                                                <span class="badge badge-complete" style="background: orange;">{{$opp->status}}</span>
                                             </td>
+                                            <td class="name">{{$opp->created_at}}</td>
+
                                             <td>
                                                 <span class="badge badge-complete">
                                                     <a style="color: white;" href="#">Edit</a>
                                                 </span>
                                             </td>
+                                            
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <table class="table ">
