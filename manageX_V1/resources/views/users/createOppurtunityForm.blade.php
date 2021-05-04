@@ -9,7 +9,7 @@
         <div class="container">
             <div class="">
                 <div class="card">
-                    <form action="" method="post">
+                    <form action="{{route('createNewOppurtunity')}}" method="post">
                         {{csrf_field()}}
                         <div class="card-header"><strong>Oppurtunity</strong><small> Form</small></div>
                         <div class="card-body card-block">

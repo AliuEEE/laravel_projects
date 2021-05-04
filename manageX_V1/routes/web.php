@@ -32,12 +32,12 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
-// Route::get('/createOppurtunityForm', ['uses' => OppurtunityController::class], 'createOppurtunityForm')->name('createOppurtunityForm');
+// Route::get('/createOppurtunityForm', ['App\Http\Controllers\OppurtunityController::class], 'createOppurtunityForm')->name('createOppurtunityForm');
 
 //this method is used because auth is used in the laravel
 Route::get('/createOppurtunityForm', ['uses' => 'App\Http\Controllers\OppurtunityController@createOppurtunityForm'])->name('createOppurtunityForm');
 
-
+Route::post('/createNewOppurtunity', ['uses' => 'App\Http\Controllers\OppurtunityController@createOppurtunity'])->name('createNewOppurtunity');
 
 
 

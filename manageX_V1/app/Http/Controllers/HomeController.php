@@ -30,7 +30,8 @@ class HomeController extends Controller
     {
 
         $id = Auth::user()->id;
-        $oppurtunity = DB::table('oppurtunities')->where('user_id',$id)->get();
+        
+        $oppurtunity = DB::table('oppurtunities')->latest()->where('user_id',$id)->get();
 
         //card values
 
