@@ -43,6 +43,10 @@ Route::get('/editOppurtunityForm/{id}', ['uses' => 'App\Http\Controllers\Oppurtu
 
 Route::post('/editOppurtunity', ['uses' => 'App\Http\Controllers\OppurtunityController@editOppurtunity'])->name('editOppurtunity');
 
+Route::get('/allOppurtunity', ['uses' => 'App\Http\Controllers\OppurtunityController@allOppurtunities'])->name('allOppurtunities');
+
+Route::get('deleteOppurtunity/{id}', ['uses' => 'App\Http\Controllers\OppurtunityController@deleteOppurtunity'])->name('deleteOppurtunity');
+
 
 
 //admin routes

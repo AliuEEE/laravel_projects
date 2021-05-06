@@ -71,12 +71,28 @@ class OppurtunityController extends Controller
             'description' => $description,
             'duration' => $duration,
             'partner' => $partner,
-            'status' => $status,
-            //'user_id' => $id
+            'status' => $status
+
         ]);
         //use redirect after an insert operation
 
         return \redirect('/home');
+    }
+
+    public function allOppurtunities(){
+
+        $id = Auth::user()->id;
+        
+        $oppurtunity = DB::table('oppurtunities')->latest()->where('user_id',$id)->get();
+
+        return view('users.allOppurtunities',['oppurtunity'=>$oppurtunity]);
+        
+    }
+
+    public function deleteOppurtunity(Request $request, $id){
+        DB::table('oppurtunities')->where('id',$id)->delete();
+
+        return \redirect('/allOppurtunity');
     }
     
 }

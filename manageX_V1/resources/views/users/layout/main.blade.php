@@ -45,7 +45,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Management</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('createOppurtunityForm')}}">Add New Oppurtunity</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="#">Edit Oppurtunity</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{route('allOppurtunities')}}">Edit Oppurtunity</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
