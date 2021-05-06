@@ -39,6 +39,10 @@ Route::get('/createOppurtunityForm', ['uses' => 'App\Http\Controllers\Oppurtunit
 
 Route::post('/createNewOppurtunity', ['uses' => 'App\Http\Controllers\OppurtunityController@createOppurtunity'])->name('createNewOppurtunity');
 
+Route::get('/editOppurtunityForm/{id}', ['uses' => 'App\Http\Controllers\OppurtunityController@editOppurtunityForm'])->name('editOppurtunityForm');
+
+Route::post('/editOppurtunity', ['uses' => 'App\Http\Controllers\OppurtunityController@editOppurtunity'])->name('editOppurtunity');
+
 
 
 //admin routes

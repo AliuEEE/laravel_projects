@@ -98,13 +98,21 @@
                                             <td class="name">{{$opp->duration}} Week(s)</td>
                                             <td class="name">{{$opp->partner}}</td>
                                             <td>
+                                            @if($opp->status == 'bidding')
+                                                <span class="badge badge-complete" style="background: red;">{{$opp->status}}</span>
+                                                @elseif($opp->status == 'quote')
                                                 <span class="badge badge-complete" style="background: orange;">{{$opp->status}}</span>
+                                                @elseif($opp->status == 'deployment')
+                                                <span class="badge badge-complete" style="background: navy;">{{$opp->status}}</span>
+                                                @else
+                                                <span class="badge badge-complete">{{$opp->status}}</span>
+                                                @endif
                                             </td>
                                             <td class="name">{{$opp->created_at}}</td>
 
                                             <td>
                                                 <span class="badge badge-complete">
-                                                    <a style="color: white;" href="#">Edit</a>
+                                                    <a style="color: white;" href="{{route('editOppurtunityForm',['id'=>$opp->id])}}">Edit</a>
                                                 </span>
                                             </td>
                                             

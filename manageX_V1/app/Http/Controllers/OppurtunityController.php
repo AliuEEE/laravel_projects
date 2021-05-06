@@ -46,4 +46,37 @@ class OppurtunityController extends Controller
 
         return \redirect('/home');
     }
+
+    public function editOppurtunityForm(Request $request, $id){
+        $oppurtunity = DB::table('oppurtunities')->where('id',$id)->get();
+        
+        return view('users.editOppurtunityForm',['oppurtunity'=>$oppurtunity]);
+    }
+    public function editOppurtunity(Request $request){
+
+        $id = $request->input('id');
+        $customer = $request->input('customer');
+        $service = $request->input('service');
+        $description = $request->input('description');
+        $duration = $request->input('duration');
+        $partner = $request->input('partner');
+        $status = $request->input('status');
+
+        
+        //inserting into DB
+
+        DB::table('oppurtunities')->where('id',$id)->update([
+            'customer'=>$customer,
+            'service' => $service,
+            'description' => $description,
+            'duration' => $duration,
+            'partner' => $partner,
+            'status' => $status,
+            //'user_id' => $id
+        ]);
+        //use redirect after an insert operation
+
+        return \redirect('/home');
+    }
+    
 }
