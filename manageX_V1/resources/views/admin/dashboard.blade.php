@@ -1,276 +1,206 @@
-@extends('layouts.adminNav')
+@extends('admin.layout.main')
 
 @section('content')
 
-<aside id="left-panel" class="left-panel">
-        <nav class="navbar navbar-expand-sm navbar-default">
-            <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="./"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
-                    <li class="menu-title">Options</li>
-                    <!-- /.menu-title -->
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Management</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="http://127.0.0.1:8000/createOppurtunityForm">Add New Oppurtunity</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="http://127.0.0.1:8000/editAllOppurtunity">Edit Oppurtunity</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Informatiion</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/completedOppurtunity">Completed</a></li>
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/quoteOppurtunity">Quotes</a></li>
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/biddingOppurtunity">Bids</a></li>
-                            <li><i class="fa fa-table"></i><a href="http://127.0.0.1:8000/deployedOppurtunity">Deployed</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>About</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">System Info</a></li>
-                        </ul>
-                    </li>
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-</aside>
-<!-- /#left-panel -->
-    <!-- Right Panel -->
-    <div id="right-panel" class="right-panel">
-        <!-- Header-->
-        <header id="header" class="header">
-            <div class="top-left">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./">Project X</a>
-                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-                </div>
-            </div>
-            <div class="top-right">
-                <div class="header-menu">
-                    <div class="header-left">
-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
-                        <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                            </form>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </header>
-        <!-- /#header -->
-
-
-
-        <!-- Content -->
-        <div class="content">
-            <!-- Animated -->
-            <div class="animated fadeIn">
-                <!-- Widgets  -->
-                <div class="row container-fluid">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-1">
-                                        <i class="pe-7s-cash"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">5</span></div>
-                                            <div class="stat-heading">Total</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-2">
-                                        <i class="pe-7s-cart"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">1</span></div>
-                                            <div class="stat-heading">Completed</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-3">
-                                        <i class="pe-7s-browser"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">5</span></div>
-                                            <div class="stat-heading">In Progress</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /Widgets -->
-
-                <div class="clearfix"></div>
-                <!-- Tasks -->
-                <div class="tasks container-fluid">
-                    <div class="row">
-                        <div class="container-fluid">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="box-title">Oppurtunity </h4>
-                                </div>
-                                <div class="card-body container">
-                                    <div class="table-stats order-table ov-h">
-                                        <table class="table">
-                                            <thead class="thead-dark">
-                                                <tr>
-                                                    <th scope="col">Customer</th>
-                                                    <th scope="col">Service</th>
-                                                    <th scope="col">Description</th>
-                                                    <th scope="col">Duration</th>
-                                                    <th scope="col">Partner</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Edit</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="name">CBN</td>
-                                                    <td class="name">bespoke</td>
-                                                    <td class="name">Do a Sophos Demo</td>
-                                                    <td class="name">5 Week(s)</td>
-                                                    <td class="name">Mart-Networks</td>
-                                                    <td>
-                                                        <span class="badge badge-complete" style="background: orange;">quote</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-complete">
-                                                    <a style="color: white;" href="http://127.0.0.1:8000/editOppurtunityForm/2">Edit</a>
-                                                </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="name">VON</td>
-                                                    <td class="name">bespoke</td>
-                                                    <td class="name">Host for users to test and give feedback</td>
-                                                    <td class="name">4 Week(s)</td>
-                                                    <td class="name">TMB</td>
-                                                    <td>
-                                                        <span class="badge badge-complete" style="background: red;">bidding</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-complete">
-                                                    <a style="color: white;" href="http://127.0.0.1:8000/editOppurtunityForm/3">Edit</a>
-                                                </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="name">VON</td>
-                                                    <td class="name">bespoke</td>
-                                                    <td class="name">Carrying out Unit tests</td>
-                                                    <td class="name">6 Week(s)</td>
-                                                    <td class="name">TMB</td>
-                                                    <td>
-                                                        <span class="badge badge-complete" style="background: navy;">deployment</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-complete">
-                                                    <a style="color: white;" href="http://127.0.0.1:8000/editOppurtunityForm/4">Edit</a>
-                                                </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="name">CBN</td>
-                                                    <td class="name">notap</td>
-                                                    <td class="name">Process a payment certification</td>
-                                                    <td class="name">2 Week(s)</td>
-                                                    <td class="name">BC Tech</td>
-                                                    <td>
-                                                        <span class="badge badge-complete">complete</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-complete">
-                                                    <a style="color: white;" href="http://127.0.0.1:8000/editOppurtunityForm/5">Edit</a>
-                                                </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="name">CBN</td>
-                                                    <td class="name">notap</td>
-                                                    <td class="name">Process a payment certification</td>
-                                                    <td class="name">2 Week(s)</td>
-                                                    <td class="name">TMB</td>
-                                                    <td>
-                                                        <span class="badge badge-complete" style="background: red;">bidding</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-complete">
-                                                    <a style="color: white;" href="http://127.0.0.1:8000/editOppurtunityForm/6">Edit</a>
-                                                </span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <table class="table ">
-                                            <thead>
-
-                                            </thead>
-                                        </table>
-                                    </div>
-                                    <!-- /.table-stats -->
-                                </div>
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col-lg-8 -->
-
-                    </div>
-                </div>
-                <!-- /.col-md-4 -->
-            </div>
-        </div>
-        <!-- /.orders -->
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
     </div>
-    <!-- /.content -->
-    <div class="clearfix"></div>
 
+    <!-- Content Row -->
+    <div class="row">
 
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner bg-white">
-            <div class="row">
-                <div class="col-sm-6">
-                    Copyright &copy; 2018 Ela Admin
-                </div>
-                <div class="col-sm-6 text-right">
-                    Designed by <a href="https://colorlib.com">Colorlib</a>
+        <!-- Oppurtunities -->
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Oppurtunities</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- /.site-footer -->
+
+        <!-- Complete Oppurtunities -->
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Complete</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">15</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oppurtunities in Progress -->
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">In Progress
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content Row -->
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Invoices -->
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Invoices</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paid Invoices -->
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Paid
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Invoices Paid in Full -->
+         <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Paid In Full
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content Row -->
+
+
+    <div class="row">
+
+        <!-- Content Column -->
+        <div class="col-lg-6 mb-4">
+
+            <!-- Project Card Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Oppurtunities</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Content Column -->
+        <div class="col-lg-6 mb-4">
+
+            <!-- Project Card Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Invoices</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
 @endsection

@@ -65,7 +65,7 @@ class AdminLoginController extends Controller
 
         $this->clearLoginAttempts($request);
 
-        if ($response = $this->authenticated($request, $this->guard()->user())) {
+        if ($response = $this->authenticated($request, $this->guard()->admin())) {
             return $response;
         }
 
@@ -100,8 +100,14 @@ class AdminLoginController extends Controller
 
         Auth::guard('admin')->logout();
 
-        return redirect()->intended('admin');
+        return $request->wantsJson()
+            ? new JsonResponse([], 204)
+            : redirect('/admin');
+
+        //return redirect()->intended('admin');
     }
+
+
     
     // /**
     //  * Where to redirect users after login.
