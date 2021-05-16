@@ -65,22 +65,32 @@
                                     <label for="select" class="form-control-label">Status</label>
                                     <select id="select" class="form-control" name="status">
                                         
-                                        @if($opp->status == 'bidding')
+                                        @if($opp->status == 'proposal')
+                                        <option value="bidding" selected>Proposal</option>
+                                        <option value="bidding">Bidding</option>
+                                        <option value="quote">Quote</option>
+                                        <option value="deployment">Deployment</option>
+                                        <option value="complete">Complete</option>
+                                        @elseif($opp->status == 'bidding')
+                                        <option value="bidding">Proposal</option>
                                         <option value="bidding" selected>Bidding</option>
                                         <option value="quote">Quote</option>
                                         <option value="deployment">Deployment</option>
                                         <option value="complete">Complete</option>
                                         @elseif($opp->status == 'quote')
+                                        <option value="bidding">Proposal</option>
                                         <option value="bidding">Bidding</option>
                                         <option value="quote" selected>Quote</option>
                                         <option value="deployment">Deployment</option>
                                         <option value="complete">Complete</option>
                                         @elseif($opp->status == 'deployment')
+                                        <option value="bidding">Proposal</option>
                                         <option value="bidding">Bidding</option>
                                         <option value="quote">Quote</option>
                                         <option value="deployment" selected>Deployment</option>
                                         <option value="complete">Complete</option>
                                         @else
+                                        <option value="bidding">Proposal</option>
                                         <option value="bidding">Bidding</option>
                                         <option value="quote">Quote</option>
                                         <option value="deployment">Deployment</option>

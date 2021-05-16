@@ -98,7 +98,9 @@
                                             <td class="name">{{$opp->duration}} Week(s)</td>
                                             <td class="name">{{$opp->partner}}</td>
                                             <td>
-                                            @if($opp->status == 'bidding')
+                                                @if($opp->status == 'proposal')
+                                                <span class="badge badge-complete" style="background: orange;">{{$opp->status}}</span>
+                                                @elseif($opp->status == 'bidding')
                                                 <span class="badge badge-complete" style="background: red;">{{$opp->status}}</span>
                                                 @elseif($opp->status == 'quote')
                                                 <span class="badge badge-complete" style="background: orange;">{{$opp->status}}</span>

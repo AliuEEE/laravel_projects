@@ -38,6 +38,7 @@
                             <div class="form-group">
                                 <label for="select" class="form-control-label">Status</label>
                                 <select id="select" class="form-control" name="status">
+                                    <option value="proposal">Proposal</option>
                                     <option value="bidding">Bidding</option>
                                     <option value="quote">Quote</option>
                                     <option value="deployment">Deployment</option>
