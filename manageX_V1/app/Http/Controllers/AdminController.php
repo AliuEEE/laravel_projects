@@ -42,4 +42,15 @@ class AdminController extends Controller
         'oppurtunities'=>$opputinities]);
     }
 
+    public function allUsersOppurtunities(){
+        
+        $oppurtunity = DB::table('oppurtunities')->latest()->get();
+        $users = DB::table('users')->get();
+
+        return view('admin.allUsersOppurtunities',['oppurtunity'=>$oppurtunity,'users'=>$users]);
+        //{{ Auth::user()->name }}
+        
+    }
+    
+
 }

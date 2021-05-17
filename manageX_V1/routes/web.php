@@ -53,6 +53,11 @@ Route::get('deleteOppurtunity/{id}', ['uses' => 'App\Http\Controllers\Oppurtunit
 
 Route::get('/admin/login', [AdminLoginController::class, 'showAdminLoginForm'])->name('adminLogin');
 
+Route::get('/admin/allUsersOppurtunities', [AdminController::class, 'allUsersOppurtunities'])->name('allUsersOppurtunities');
+
+
+
+
 //authenticate the admin
 
 Route::post('/admin/login', [AdminLoginController::class, 'authenticate'])->name('authenticate');
